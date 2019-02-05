@@ -36,7 +36,7 @@ function add_estilos_e_scripts() {
 	wp_enqueue_style( 'css', get_template_directory_uri() . '/style.css');
 	
 	// Fontes
-	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,700');
 	
 	// Scripts
 	wp_deregister_script( 'jquery' );
