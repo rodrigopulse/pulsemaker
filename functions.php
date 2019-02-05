@@ -1,5 +1,10 @@
 <?php
-/*
+/**
+ * Componentes do template
+ */
+include dirname( __FILE__ ) . '/template_partes/componentes/destaque.php';
+include dirname( __FILE__ ) . '/template_partes/componentes/card.php';
+/**
  * Remove &nbsp dos posts;
 */
 function remove_empty_lines( $content ){
@@ -15,7 +20,9 @@ add_theme_support( 'post-thumbnails' );
 /**
  * Tamanhos das imagens para thumbs
  */
-//add_image_size( 'thumb-card', 330, 248, true );
+add_image_size( 'thumb-destaque-mobile', 374, 490, true );
+add_image_size( 'thumb-destaque-desktop', 950, 510, true );
+add_image_size( 'thumb-card', 326, 160, true );
 
 /**
  * Habilita o Title no wordpress

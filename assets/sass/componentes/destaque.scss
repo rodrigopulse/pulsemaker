@@ -1,0 +1,48 @@
+.destaque {
+    width: 100%;
+    height: 80%;
+    display: block;
+    position: relative;
+    top: 0;
+    background: #ccc;
+    margin-bottom: 20px;
+    &__thumb {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        margin: 0;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__over {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.3+0,0.81+100 */
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.81) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.81) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.81) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#cf000000',GradientType=0 ); /* IE6-9 */
+        z-index: 1;
+    }
+    &__conteudo {
+        bottom: 25px;
+        padding: 15px;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+        a {
+            text-decoration: none;
+        }
+        .titulo-h1 {
+            color: #fff;
+        }
+    }
+}
