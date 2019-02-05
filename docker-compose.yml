@@ -1,0 +1,30 @@
+wordpress:
+  image: wordpress
+  volumes:
+    - ./:/var/www/html
+  environment:
+    WORDPRESS_DB_PASSWORD: senha-novo-usuario
+  links:
+    - mysql:mysql
+  ports:
+    - "80:80"
+
+mysql:
+  image: mariadb
+  environment:
+    - MYSQL_USER=nome-usuario
+    - MYSQL_PASSWORD=senha-novo-usuario
+    - MYSQL_DATABASE=nome-banco
+    - MYSQL_ROOT_PASSWORD=senha-usuario-root
+    - TERM=xterm
+  ports:
+      - "3306:3306"
+
+my-wpcli:
+  image: tatemz/wp-cli
+  volumes_from:
+    - wordpress
+  links:
+    - mysql:mysql
+  entrypoint: wp
+  command: "--info"

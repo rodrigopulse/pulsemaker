@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*!
+    Theme Name: Pulse Maker
+    Theme URI: https://github.com/rodrigopulse/pulsemaker
+    Description: Tema para o blog Pulse Maker
+    Version: 1.0
+    Author: Rodrigo Godoy
+    Author URI: https://github.com/rodrigopulse
+    Tags: Wordpress, html5, css3, jquery
+*/
+
+// Base
+@import "base/variaveis";
+@import "base/normalize.scss";
+@import "base/resets";
+@import "base/fontes";
+
+// Componentes
+
+// Layout

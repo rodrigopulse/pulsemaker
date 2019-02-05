@@ -1,0 +1,36 @@
+{
+  "name": "pulsemaker",
+  "version": "1.0.0",
+  "description": "Tema para o blog Pulse Maker",
+  "main": "index.php",
+  "scripts": {
+    "postinstall": "node ./node_modules/gulp-cli/bin/gulp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigopulse/pulsemaker"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Rodrigo Godoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigopulse/pulsemaker/issues"
+  },
+  "homepage": "https://github.com/rodrigopulse/pulsemaker/#README.md",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-js-minify": "0.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-uglify": "^3.0.1"
+  }
+}
