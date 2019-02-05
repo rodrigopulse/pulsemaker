@@ -8,8 +8,14 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="header-principal">
-	<div class="header-principal__logo">
-	</div>
-	<button class="header-principal__hamburguer">
-	</button>
+	<div class="container">
+		<div class="header-principal__hamburguer">
+			<button class="header-principal__hamburguer-botao">
+				<i class="material-icons">menu</i>
+			</button>
+		</div>
+		<div class="header-principal__logo">
+			<img src="<?php bloginfo( 'template_url' ); ?>/assets/imagens/logo-pulse-branco.svg" alt="Pulse Maker">
+		</div>
+	</div><!--.container-->
 </header>
