@@ -127,6 +127,17 @@
    padding: 10px 0;
    font-size: 22px;
 }
+.menu {
+    li {
+        a {
+            text-decoration: none;
+            color: $cor-textos;
+            &:hover {
+                 color: #000;
+            }
+        }
+    }
+}
 #menuToggle input:checked ~ ul {
    transform: none;
 }
