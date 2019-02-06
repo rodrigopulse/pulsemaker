@@ -23,6 +23,8 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumb-destaque-mobile', 374, 490, true );
 add_image_size( 'thumb-destaque-desktop', 950, 510, true );
 add_image_size( 'thumb-card', 326, 160, true );
+add_image_size( 'post-thumb-mobile', 375, 262, true );
+add_image_size( 'post-thumb-desktop', 878, 418, true );
 
 /**
  * Habilita o Title no wordpress
@@ -75,11 +77,11 @@ remove_action('wp_head', 'wp_generator');
 
 /**
  * Posições de Menu
- 
+ */
 function register_my_menu() {
 	register_nav_menu('header-menu',__( 'Header Menu' ));
 }
-add_action( 'init', 'register_my_menu' ); */
+add_action( 'init', 'register_my_menu' );
 
 /**
  * Ajustes do admin bar

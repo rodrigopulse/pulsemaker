@@ -17,5 +17,6 @@
 		<div class="header-principal__logo">
 			<img src="<?php bloginfo( 'template_url' ); ?>/assets/imagens/logo-pulse-branco.svg" alt="Pulse Maker">
 		</div>
+		<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 	</div><!--.container-->
 </header>

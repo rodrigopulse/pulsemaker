@@ -17,11 +17,12 @@ if ( $the_query->have_posts() ) {
                     </h3>
                 </div>
             <?php } 
-            if ( $i == 2 || $i == 5 ) { echo '<div class="container"><div class="row">'; } ?>
-            <div class="col-md-12">
+            if ( $i == 2 ) { echo '<div class="container"><div class="row">'; } ?>
+            <div class="col-sm-12 col-md-4">
                 <?php card( get_the_title(), get_the_permalink(), get_the_post_thumbnail_url( '', 'thumb-card' ) ); ?>
             </div>
-            <?php if ( $i == 2 || $i == 5 ) { echo '</div></div>'; }
+            <?php if ( $i == 4 ) { echo '</div></div><div class="container"><div class="row">'; }
         }
     }
+    echo '</div></div>';
 }

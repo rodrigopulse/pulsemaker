@@ -8,8 +8,6 @@
                 <h3 class="card__titulo"><?php echo $titulo; ?></h3>
             </a>
         </div>
-        <div class="container">
-            <a class="card__botao-leia-mais" href="<?php echo $link; ?>">Leia Mais</a>
-        </div>
+        <a class="card__botao-leia-mais" href="<?php echo $link; ?>">Leia Mais</a>
     </div>
 <?php }
