@@ -21,13 +21,22 @@
 <header class="header-principal">
 	<div class="container">
 		<div class="header-principal__hamburguer">
-			<button class="header-principal__hamburguer-botao">
-				<i class="material-icons">menu</i>
-			</button>
+			<nav role="navigation">
+			<div id="menuToggle">
+				<input type="checkbox" />
+				<span></span>
+				<span></span>
+				<span></span>
+				<?php wp_nav_menu( array( 
+					'theme_location' 	=> 'header-menu',
+					'container'			=> 'ul',
+					'menu_id'		=> 'menu'
+				) ); ?>
+			</div>
+			</nav>
 		</div>
 		<div class="header-principal__logo">
 			<img src="<?php bloginfo( 'template_url' ); ?>/assets/imagens/logo-pulse-branco.svg" alt="Pulse Maker">
 		</div>
-		<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 	</div><!--.container-->
 </header>
