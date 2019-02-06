@@ -1,7 +1,9 @@
 <?php function card($titulo, $link, $thumb) { ?>
     <div class="card">
         <div class="card__thumb">
-            <img src="<?php echo $thumb; ?>" alt="<?php echo $titulo; ?>">
+            <a href="<?php echo $link; ?>">
+                <img src="<?php echo $thumb; ?>" alt="<?php echo $titulo; ?>">
+            </a>
         </div>
         <div class="card__conteudo">
             <a href="<?php echo $link; ?>">
