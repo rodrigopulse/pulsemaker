@@ -36,7 +36,9 @@
 			</nav>
 		</div>
 		<div class="header-principal__logo">
-			<img src="<?php bloginfo( 'template_url' ); ?>/assets/imagens/logo-pulse-branco.svg" alt="Pulse Maker">
+			<a href="<?php bloginfo('url'); ?>">
+				<img src="<?php bloginfo( 'template_url' ); ?>/assets/imagens/logo-pulse-branco.svg" alt="Pulse Maker">
+			</a>
 		</div>
 	</div><!--.container-->
 </header>
