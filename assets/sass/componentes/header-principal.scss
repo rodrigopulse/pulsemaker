@@ -142,8 +142,16 @@
    transform: none;
 }
 .sub-menu {
-    padding: 0 12px;
+    padding: 0;
     li {
         list-style: none;
+        a {
+            padding-left: 15px;
+        }
+    }
+}
+.current-menu-item {
+    a {
+        border-left: 4px solid $cor-primaria;
     }
 }

@@ -1,6 +1,9 @@
-@media (min-width: 1200px) {
-    .container {
+.container {
+    @media (min-width: 1200px) {
         padding-right: 0;
         padding-left: 0;
+    }
+    &--looping {
+        margin-top: 15px;
     }
 }
