@@ -9,6 +9,16 @@
         <header>
             <h1 class="titulo-h1"><?php the_title(); ?></h1>
             <h2 class="titulo-h2"><?php the_excerpt(); ?></h2>
+            <!-- Abaixo h2 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5289524139634886"
+                data-ad-slot="8233719602"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </header>
         <article>
             <?php if ( have_posts() ) { while ( have_posts() ) { the_post();
