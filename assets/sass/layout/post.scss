@@ -30,6 +30,15 @@
         @media screen and (min-width: 1040px) {
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         }
+        h3 {
+            display: block;
+            font-size: 22px;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
     }
 }
 code {
