@@ -3,7 +3,10 @@ wordpress:
   volumes:
     - ./:/var/www/html
   environment:
-    WORDPRESS_DB_PASSWORD: senha-novo-usuario
+    - WORDPRESS_SITE_URL=http://localhost/
+    - WORDPRESS_DB_USER=root
+    - WORDPRESS_DB_PASSWORD=root
+    - WORDPRESS_DB_NAME=pulsemaker
   links:
     - mysql:mysql
   ports:
@@ -12,14 +15,11 @@ wordpress:
 mysql:
   image: mariadb
   environment:
-    - MYSQL_USER=nome-usuario
-    - MYSQL_PASSWORD=senha-novo-usuario
-    - MYSQL_DATABASE=nome-banco
-    - MYSQL_ROOT_PASSWORD=senha-usuario-root
+    - MYSQL_DATABASE=pulsemaker
+    - MYSQL_ROOT_PASSWORD=root
     - TERM=xterm
   ports:
       - "3306:3306"
-
 my-wpcli:
   image: tatemz/wp-cli
   volumes_from:
