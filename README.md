@@ -1,2 +1,2 @@
-# Pulse Maker
-Tema Wordpress para o Blog Pulse Maker
+# Template Pulse Maker
+Template criado para o Blog Pulse Maker

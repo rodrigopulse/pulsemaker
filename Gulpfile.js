@@ -6,50 +6,49 @@ var rename 		= require("gulp-rename");
 var concat 		= require("gulp-concat");
 var browserSync = require("browser-sync");
 var uglify 		= require('gulp-uglify');
-
-// Copia o arquivo do Docker para a raiz do wordpress
-gulp.task( 'docker', function() {
-	gulp.src( 'docker-compose.yml' )
-	.pipe ( gulp.dest( '../../../' ) );
-} );
+var json		= require('json-file');
+var	themeName	= json.read('./package.json').get('themeName');
 
 // SASS
 var prefixerOptions = {
 	browsers: ['last 3 versions']
 };
 gulp.task( 'sass', function() {
-	gulp.src( 'assets/sass/style.scss' )
+	gulp.src( 'src/assets/sass/style.scss' )
 	.pipe( sourcemaps.init())
 	.pipe( sass({outputStyle: 'compressed'}).on('error', sass.logError) )
 	.pipe( sourcemaps.write( './assets/maps' ) )
-    .pipe( gulp.dest( './' ) );
+    .pipe( gulp.dest( './src/' ) );
 } );
 
 //JavaScript
 var jsFiles = [
-	'assets/js/scripts.js'
+	'src/assets/js/scripts.js'
 ];
 gulp.task( 'javascript', function() {
 	gulp.src( jsFiles )
     .pipe(concat('scripts.js'))
 	.pipe(uglify({mangle:false}))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./src/'));
+} );
+
+gulp.task( 'copiatemplate', function() {
+	gulp.src('./src/**/*')
+	.pipe(gulp.dest('./wordpress/wp-content/themes/' + themeName + '/'))
 } );
 
 // Default
-gulp.task( 'default', [ 'sass', 'javascript' ] );
+gulp.task( 'default', [ 'sass', 'javascript', 'copiatemplate' ] );
 
 // Watch
 gulp.task('watch', function() {
-    gulp.watch( 'assets/sass/**/*.scss', ['sass'] );
-    gulp.watch( 'assets/sass/style.scss', ['sass'] );
-    gulp.watch( jsFiles, ['javascript'] );
+    gulp.watch( 'src/assets/sass/**/*.scss', ['sass', 'copiatemplate'] );
+    gulp.watch( 'src/assets/sass/style.scss', ['sass', 'copiatemplate'] );
+    gulp.watch( jsFiles, ['javascript', 'copiatemplate'] );
 } );
 
 gulp.task('browser-sync', function() {
-    //initialize browsersync
     browserSync.init('', {
-		//browsersync with a php server
 		proxy: "http://localhost",
 		notify: false
     });

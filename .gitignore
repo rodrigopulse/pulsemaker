@@ -11,6 +11,7 @@ Thumbs.db
 *.log
 *.sql
 *.sqlite
+db
 
 # Editors
 *.sublime-*
@@ -26,3 +27,4 @@ assets/bibliotecas/normalize.css
 # Compilados
 *.map
 /assets/maps
+wordpress

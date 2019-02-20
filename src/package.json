@@ -1,6 +1,5 @@
 {
-  "name": "pulse-maker",
-  "themeName": "pulsemaker",
+  "name": "pulsemaker",
   "version": "1.0.0",
   "description": "Tema para o blog Pulse Maker",
   "main": "index.php",
@@ -19,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/rodrigopulse/pulsemaker/issues"
   },
-  "homepage": "https://github.com/rodrigopulse/pulsemaker/#readme",
+  "homepage": "https://github.com/rodrigopulse/pulsemaker/#README.md",
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
@@ -29,9 +28,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-watch": "^5.0.0",
-    "gulp-uglify": "^3.0.1",
-    "json-file": "^0.1.0"
+    "gulp-watch": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-uglify": "^3.0.1"
+  }
 }

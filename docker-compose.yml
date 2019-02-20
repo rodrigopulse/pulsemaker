@@ -1,30 +1,33 @@
 wordpress:
-  image: wordpress
-  volumes:
-    - ./:/var/www/html
-  environment:
-    - WORDPRESS_SITE_URL=http://localhost/
-    - WORDPRESS_DB_USER=root
-    - WORDPRESS_DB_PASSWORD=root
-    - WORDPRESS_DB_NAME=pulsemaker
-  links:
-    - mysql:mysql
-  ports:
-    - "80:80"
+    image: wordpress
+    volumes:
+        - ./wordpress:/var/www/html
+    environment:
+        - WORDPRESS_SITE_URL=http://localhost/
+        - WORDPRESS_DB_USER=root
+        - WORDPRESS_DB_PASSWORD=root
+        - WORDPRESS_DB_HOST=mysql
+        - WORDPRESS_DB_NAME=pulsemaker
+    links:
+        - mysql:mysql
+    ports:
+        - "80:80"
 
 mysql:
-  image: mariadb
-  environment:
-    - MYSQL_DATABASE=pulsemaker
-    - MYSQL_ROOT_PASSWORD=root
-    - TERM=xterm
-  ports:
-      - "3306:3306"
+    image: mariadb
+    environment:
+        - MYSQL_DATABASE=pulsemaker
+        - MYSQL_ROOT_PASSWORD=root
+        - TERM=xterm
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d/    
+    ports:
+        - "3306:3306"
 my-wpcli:
-  image: tatemz/wp-cli
-  volumes_from:
-    - wordpress
-  links:
-    - mysql:mysql
-  entrypoint: wp
-  command: "--info"
+    image: tatemz/wp-cli
+    volumes_from:
+        - wordpress
+    links:
+        - mysql:mysql
+    entrypoint: wp
+    command: "--info"
